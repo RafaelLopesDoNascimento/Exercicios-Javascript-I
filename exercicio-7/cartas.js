@@ -8,15 +8,15 @@ do {
     loopText += `${index + 1}. ${arr[index]} \n`
     
   }
-  opcao = prompt("Lista de espera de pacientes: \n" + loopText + "\n1. Novo paciente \n2. Atender paciente \n3. Sair")
+  opcao = prompt("Cartas do baralho: \n" + loopText + "\n1. Nova carta \n2. Remover uma carta \n3. Sair")
   switch (opcao) {
     case "1":
-      let novoPaciente = prompt("Insira o nome do novo paciente:")
-      arr.push(novoPaciente)
+      let novaCarta = prompt("Insira o nome da nova carta:")
+      arr.unshift(novaCarta)
       break;
       case "2":
-     pacienteRemoved = arr.shift()
-     alert(pacienteRemoved + " foi atendido")
+     cartaRemoved = arr.shift()
+     alert(cartaRemoved + " foi removida do baralho")
         break;
         case "3":
           alert("Voce escolheu 3")
